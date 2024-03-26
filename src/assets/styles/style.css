@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggleHamburger{
+    height: 0;
+
+    &::before{
+        transform:translateY(-100%) rotate(45deg) !important;
+    }
+
+    &::after{
+        transform:translateY(-100%) rotate(-45deg) !important;
+    }
+}
