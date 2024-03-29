@@ -8,8 +8,8 @@ export default function linksReducer(links,action) {
 
         case 'statusDone':
             return links.map((menuLink)=>{
-                if(menuLink.id === action?.id){
-                     menuLink.linkStatus = true
+                if(menuLink.id == action?.id){
+                     menuLink.linkStatus = ! menuLink.linkStatus
                 }else{
                     menuLink.linkStatus = false
                 }

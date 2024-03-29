@@ -6,20 +6,18 @@ export default function PostsAll() {
     return(
 
         <>
+            {/* <!-- Main Header --> */}
+            <section className="bg-gray-200 py-24 border-b-2 border-gray-300">
+                <div className="container mx-auto px-8">
+                    <article className="flex justify-center items-center">
+                        <h2 className="text-3xl md:text-5xl text-gray-600 font-bold m-0">مقالات</h2>
+                    </article>
+                </div>
+            </section>
+
             {/* <!-- Section Posts --> */}
             <section className="sectionPosts bg-white py-32">
                 <div className="container mx-auto px-8">
-                    {/* <!-- Title Section Posts --> */}
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full pb-5 mb-5">
-                        <div className="flex flex-col justify-between gap-3">
-                            <h2 className="text-xl text-center md:text-right md:text-2xl font-bold"> مقالات</h2>
-                            <div className="bg-mainColorYellow rounded-lg w-full h-2"></div>
-                        </div>
-
-                        {/* <div>
-                            <button className="flex justify-center items-center text-sm font-semibold border-2 border-mainColorYellow text-mainColorYellow rounded py-2 px-5 hover:bg-mainColorYellow hover:text-white transition-all">نمایش همه</button>
-                        </div> */}
-                    </div>
 
                     {/* Posts */}
                     <Posts />

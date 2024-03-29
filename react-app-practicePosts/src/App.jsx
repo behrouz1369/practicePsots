@@ -49,7 +49,7 @@ function App() {
 
 
          {/* <!-- Content Web --> */}
-        <main className="mt-[60px]">
+        <main className="mt-[120px]">
             <BrowserRouter>
                 <Routes>
                     <Route path="/">
