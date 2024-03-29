@@ -1,7 +1,26 @@
+import { useContext } from "react"
+import { MenuLinksContext } from "../../contexts/MenuLinksContext"
 
 
-export default function MenuLinkListItem({linkItem,statusDone}) {
+export default function MenuLinkListItem({linkItem}) {
+    const {linksDispacher} = useContext(MenuLinksContext)
 
+    const  statusDone = async (linkItem) =>{
+        let res = await fetch(`https://6604ec192ca9478ea17eca2e.mockapi.io/menuLinks/${linkItem.id}`,{
+            method:"put",
+            headers: {'content-type':'application/json'},
+            body:JSON.stringify({
+                linkStatus: ! linkItem.linkStatus
+            })
+        })
+
+        if(res.ok){
+            linksDispacher({
+                type:'statusDone',
+                id: linkItem.id
+            })
+        }
+    }
     return(
         <>
             <li className="group relative">
